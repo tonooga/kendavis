@@ -1,6 +1,6 @@
 version: 1
 applications:
-  - appRoot: tonooga/kendavis/client # Replace with the actual path to your frontend app
+  - appRoot: kendavis/client # Replace with the actual path to your frontend app
     platform: web
     artifacts:
       baseDirectory: dist # Or 'build', 'public', etc. depending on your build output

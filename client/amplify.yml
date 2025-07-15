@@ -3,14 +3,15 @@ applications:
   - appRoot: kendavis/client # Replace with the actual path to your frontend app
     platform: web
     artifacts:
-      baseDirectory: dist # Or 'build', 'public', etc. depending on your build output
+      baseDirectory: client/dist # Or 'build', 'public', etc. depending on your build output
       files:
         - '**/*'
     frontend:
       phases:
         preBuild:
           commands:
-            - npm ci
+            - cd client
+            - 'npm install'
         build:
           commands:
             - npm run build

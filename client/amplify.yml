@@ -1,6 +1,6 @@
 version: 1
 applications:
-  - appRoot: kendavis/client # Replace with the actual path to your frontend app
+  - appRoot: kendavis # Replace with the actual path to your frontend app
     platform: web
     artifacts:
       baseDirectory: client/dist # Or 'build', 'public', etc. depending on your build output

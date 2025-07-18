@@ -1,20 +1,18 @@
 version: 1
-applications:
-  - appRoot: kendavis # Replace with the actual path to your frontend app
-    platform: web
-    artifacts:
-      baseDirectory: dist # Or 'build', 'public', etc. depending on your build output
-      files:
-        - '**/*'
-    frontend:
-      phases:
-        preBuild:
-          commands:
-            - 
-            - 'npm install'
-        build:
-          commands:
-            - npm run build
+frontend:
+  phases:
+    build:
+      commands:
+        - npm ci
+        - npm run build
+  artifacts:
+    baseDirectory: build  # or build or whatever your output folder is
+    files:
+      - '**/*'
+  cache:
+    paths:
+      - node_modules/**/*
+
 
 # You might also have a primary branch setting, but it's optional for monorepos
 # primaryBranch: main

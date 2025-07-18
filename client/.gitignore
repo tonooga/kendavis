@@ -25,3 +25,5 @@ dist-ssr
 *.sw?
 
 amplify copy.yml
+client
+server
